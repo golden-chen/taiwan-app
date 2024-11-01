@@ -7,7 +7,7 @@ def load_data(url):
     df = pd.read_csv(url)  # 👈 Download the data
     return df
 
-df = load_data("https://github.com/plotly/datasets/raw/master/uber-rides-data1.csv")
+df = load_data("https://data.taipei/api/dataset/e93c7e94-2d3c-4686-b81e-1f1975a1953d/resource/647c171d-8ff1-44bd-beb3-16eed00edc6b/download")
 st.dataframe(df)
 
 st.button("Rerun")
