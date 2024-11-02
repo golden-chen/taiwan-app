@@ -16,7 +16,7 @@ st.markdown("###  ❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️�
 st.title('Counter Example using Callbacks with args')
 if 'count1' not in st.session_state:
     st.session_state.count1 = 0
-c3,c4,c5=st.colummns([3,3,3])
+c3,c4,c5=st.columns([3,3,3])
 increment_value = c3.number_input('Enter a value', value=0, step=1)
 
 def increment_counter1(increment_value):
