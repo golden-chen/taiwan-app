@@ -25,6 +25,6 @@ def sub_counter1(increment_value):
     st.session_state.count1 -= increment_value
 increment = c4.button('Add', on_click=add_counter1,
     args=(increment_value, ))
-increment = c5.button('Add', on_click=sub_counter1,
+increment = c5.button('Sub', on_click=sub_counter1,
     args=(increment_value, ))
 c6.text('Count1 = '+str(st.session_state.count1))
