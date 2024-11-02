@@ -25,4 +25,4 @@ def increment_counter1(increment_value):
 increment = c4.button('Add', on_click=increment_counter1,
     args=(increment_value, ))
 
-c5.write('Count = ', st.session_state.count1)
+c5.text('Count1 = '+str(st.session_state.count1))
