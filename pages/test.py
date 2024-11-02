@@ -32,7 +32,7 @@ c6.text('Count1 = '+str(st.session_state.count1))
 #-----------------------------------------------------
 st.divider()
 st.title('test dialog')
-st.button('dialog',on_click=tvote)
+
 def tvote():
     @st.dialog("Cast your vote")
     def vote(item):
@@ -50,6 +50,7 @@ def tvote():
             vote("B")
     else:
         f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
+st.button('dialog',on_click=tvote)       
 #--------------------------------------------------------    
 st.divider()
 with st.form("my_form"):
