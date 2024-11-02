@@ -12,6 +12,7 @@ def increment_counter():
 col[0].button('Increment', on_click=increment_counter)
 #c2.title('Count = ', st.session_state.count)
 col[1].text('Count = '+ str(st.session_state.count))
+#---------------------------------------------------
 st.divider()
 st.title('Counter Example using Callbacks with args')
 if 'count1' not in st.session_state:
@@ -28,7 +29,9 @@ increment = c4.button('Add', on_click=add_counter1,
 increment = c5.button('Sub', on_click=sub_counter1,
     args=(increment_value, ))
 c6.text('Count1 = '+str(st.session_state.count1))
+#-----------------------------------------------------
 st.divider()
+st.write('test dialog')
 @st.dialog("Cast your vote")
 def vote(item):
     st.write(f"Why is {item} your favorite?")
@@ -45,6 +48,7 @@ if "vote" not in st.session_state:
         vote("B")
 else:
     f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
+#--------------------------------------------------------    
 st.divider()
 with st.form("my_form"):
     st.write("Inside the form")
