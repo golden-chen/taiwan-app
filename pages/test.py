@@ -32,7 +32,7 @@ c6.text('Count1 = '+str(st.session_state.count1))
 #-----------------------------------------------------
 st.divider()
 st.title('test dialog')
-st.button('test dialog',on_click=tvote)
+st.button('dialog',on_click=tvote)
 def tvote():
     @st.dialog("Cast your vote")
     def vote(item):
