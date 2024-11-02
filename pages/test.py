@@ -28,3 +28,20 @@ increment = c4.button('Add', on_click=add_counter1,
 increment = c5.button('Sub', on_click=sub_counter1,
     args=(increment_value, ))
 c6.text('Count1 = '+str(st.session_state.count1))
+st.divider()
+@st.dialog("Cast your vote")
+def vote(item):
+    st.write(f"Why is {item} your favorite?")
+    reason = st.text_input("Because...")
+    if st.button("Submit"):
+        st.session_state.vote = {"item": item, "reason": reason}
+        st.rerun()
+
+if "vote" not in st.session_state:
+    st.write("Vote for your favorite")
+    if st.button("A"):
+        vote("A")
+    if st.button("B"):
+        vote("B")
+else:
+    f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
