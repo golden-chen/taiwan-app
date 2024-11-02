@@ -5,13 +5,13 @@ st.sidebar.markdown("# test ❄️")
 st.title('Counter Example using Callbacks')
 if 'count' not in st.session_state:
     st.session_state.count = 0
-c1,c2=st.columns([3,3])
+col=st.columns(2)
 def increment_counter():
     st.session_state.count += 1
 
-c1.button('Increment', on_click=increment_counter)
-c2.title('Count = ', st.session_state.count)
-#c2.write('Count = ', st.session_state.count)
+col[0].button('Increment', on_click=increment_counter)
+#c2.title('Count = ', st.session_state.count)
+col[1].write('Count = ', st.session_state.count)
 st.markdown("###  ❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄")
 st.title('Counter Example using Callbacks with args')
 if 'count1' not in st.session_state:
