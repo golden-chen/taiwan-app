@@ -11,7 +11,7 @@ def increment_counter():
 
 col[0].button('Increment', on_click=increment_counter)
 #c2.title('Count = ', st.session_state.count)
-col[1].write('Count = ', st.session_state.count)
+col[1].text('Count = ', st.session_state.count)
 st.markdown("###  ❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄")
 st.title('Counter Example using Callbacks with args')
 if 'count1' not in st.session_state:
