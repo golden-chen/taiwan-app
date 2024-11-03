@@ -76,7 +76,7 @@ with st.form('addition'):
     cx2=cx[2].columns(2)
     submit1 = cx2[0].form_submit_button('add')
     submit2 = cx2[0].form_submit_button('sub')
-    submit3 = cx2[1].form_submit_button('muul')
+    submit3 = cx2[1].form_submit_button('mul')
     submit4 = cx2[1].form_submit_button('div')
 if submit1:
     col2.title(f'{a+b:.2f}')
