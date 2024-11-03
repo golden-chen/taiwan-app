@@ -74,6 +74,8 @@ with st.form('addition'):
     a = cx[0].number_input('a')
     b = cx[1].number_input('b')
     submit1 = cx[2].form_submit_button('add')
-
+    submit2 = cx[2].form_submit_button('sub')
 if submit1:
     col2.title(f'{a+b:.2f}')
+if submit2:
+    col2.title(f'{a-b:.2f}')    
