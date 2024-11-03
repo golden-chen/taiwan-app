@@ -66,7 +66,7 @@ st.write("Outside the form")
 #--------------------------------------------------------    
 st.divider()
 col1,col2 = st.columns([1,2])
-col1.title('Sum:')
+col1.title('Total:')
 
 with st.form('addition'):
     cx=st.columns(3)
@@ -75,7 +75,13 @@ with st.form('addition'):
     b = cx[1].number_input('b')
     submit1 = cx[2].form_submit_button('add')
     submit2 = cx[2].form_submit_button('sub')
+    submit3 = cx[2].form_submit_button('muul')
+    submit4 = cx[2].form_submit_button('div')
 if submit1:
     col2.title(f'{a+b:.2f}')
 if submit2:
     col2.title(f'{a-b:.2f}')    
+if submit3:
+    col2.title(f'{a*b:.2f}')
+if submit4:
+    col2.title(f'{a/b:.2f}') 
