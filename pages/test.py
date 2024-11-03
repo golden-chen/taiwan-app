@@ -71,8 +71,8 @@ col1.title('Total:')
 with st.form('addition'):
     cx=st.columns(3)
     
-    a = cx[0].number_input('a')
-    b = cx[1].number_input('b')
+    a = cx[0].number_input('a',step=0.1)
+    b = cx[1].number_input('b',step=0.1)
     submit1 = cx[2].form_submit_button('add')
     submit2 = cx[2].form_submit_button('sub')
     submit3 = cx[2].form_submit_button('muul')
@@ -82,6 +82,6 @@ if submit1:
 if submit2:
     col2.title(f'{a-b:.2f}')    
 if submit3:
-    col2.title(f'{a*b:.2f}')
+    col2.title(f'{a*b:.4f}')
 if submit4:
-    col2.title(f'{a/b:.2f}') 
+    col2.title(f'{a/b:.4f}') 
