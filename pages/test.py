@@ -69,7 +69,7 @@ col1,col2 = st.columns([1,2])
 col1.title('Sum:')
 
 with st.form('addition'):
-    cx=st.clummns()
+    cx=st.clumns()
     
     a = cx[0].number_input('a')
     b = cx[1].number_input('b')
