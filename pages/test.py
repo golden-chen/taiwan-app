@@ -73,10 +73,11 @@ with st.form('addition'):
     
     a = cx[0].number_input('a',step=0.1)
     b = cx[1].number_input('b',step=0.1)
-    submit1 = cx[2].form_submit_button('add')
-    submit2 = cx[2].form_submit_button('sub')
-    submit3 = cx[2].form_submit_button('muul')
-    submit4 = cx[2].form_submit_button('div')
+    cx2=cx[2].columns(2)
+    submit1 = cx2[0].form_submit_button('add')
+    submit2 = cx2[0].form_submit_button('sub')
+    submit3 = cx2[1].form_submit_button('muul')
+    submit4 = cx2[1].form_submit_button('div')
 if submit1:
     col2.title(f'{a+b:.2f}')
 if submit2:
