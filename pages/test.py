@@ -1,5 +1,10 @@
 import streamlit as st
 import pandas as pd
+def labs(s):
+    cc=st.columns(3)
+    cc[0].divider()
+    cc[1].text(s)
+    cc[2].divider()
 st.markdown("# test ❄️")
 st.sidebar.markdown("# test ❄️")
 st.title('Counter Example using Callbacks')
@@ -64,6 +69,7 @@ with st.form("my_form"):
         st.write("slider", slider_val, "checkbox", checkbox_val)
 st.write("Outside the form")
 #--------------------------------------------------------    
+labs('test')
 st.divider()
 col1,col2 = st.columns([1,2])
 col1.title('Total:')
