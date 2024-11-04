@@ -7,7 +7,7 @@ def labs(s):
     cc[2].divider()
 st.markdown("# test ❄️")
 st.sidebar.markdown("# test ❄️")
-tab1, tab2, tab3,tab4,tab5,tab6,tab7 = st.tabs(["Cat", "Dog", "Owl",'counter','add_sub','dialog','form'])
+tab1, tab2, tab3,tab4,tab5,tab6,tab7,tab8 = st.tabs(["Cat", "Dog", "Owl",'counter','add_sub','dialog','form','cal A_B'])
 
 with tab1:
     st.header("A cat")
@@ -83,24 +83,26 @@ with tab7:
 #--------------------------------------------------------    
 labs('test')
 st.divider()
-col1,col2 = st.columns([1,2])
-col1.title('Total:')
-
-with st.form('addition'):
-    cx=st.columns(3)
+with tab8:
+    st.header('Cal A B')
+    col1,col2 = st.columns([1,2])
+    col1.title('Total:')
     
-    a = cx[0].number_input('a',step=0.1)
-    b = cx[1].number_input('b',step=0.1)
-    cx2=cx[2].columns(2)
-    submit1 = cx2[0].form_submit_button('add')
-    submit2 = cx2[0].form_submit_button('sub')
-    submit3 = cx2[1].form_submit_button('mul')
-    submit4 = cx2[1].form_submit_button('div')
-if submit1:
-    col2.title(f'{a+b:.2f}')
-if submit2:
-    col2.title(f'{a-b:.2f}')    
-if submit3:
-    col2.title(f'{a*b:.4f}')
-if submit4:
-    col2.title(f'{a/b:.4f}') 
+    with st.form('addition'):
+        cx=st.columns(3)
+        
+        a = cx[0].number_input('a',step=0.1)
+        b = cx[1].number_input('b',step=0.1)
+        cx2=cx[2].columns(2)
+        submit1 = cx2[0].form_submit_button('add')
+        submit2 = cx2[0].form_submit_button('sub')
+        submit3 = cx2[1].form_submit_button('mul')
+        submit4 = cx2[1].form_submit_button('div')
+    if submit1:
+        col2.title(f'{a+b:.2f}')
+    if submit2:
+        col2.title(f'{a-b:.2f}')    
+    if submit3:
+        col2.title(f'{a*b:.4f}')
+    if submit4:
+        col2.title(f'{a/b:.4f}') 
