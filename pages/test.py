@@ -7,7 +7,7 @@ def labs(s):
     cc[2].divider()
 st.markdown("# test ❄️")
 st.sidebar.markdown("# test ❄️")
-tab1, tab2, tab3,tab4 = st.tabs(["Cat", "Dog", "Owl",'counter'])
+tab1, tab2, tab3,tab4,tab5 = st.tabs(["Cat", "Dog", "Owl",'counter','add_sub'])
 
 with tab1:
     st.header("A cat")
@@ -20,7 +20,6 @@ with tab3:
     st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 with tab4:
     st.header('Counter Example using Callbacks')    
-    #st.title()
     if 'count' not in st.session_state:
         st.session_state.count = 0
     col=st.columns(2)
@@ -30,21 +29,23 @@ with tab4:
     col[1].text('Count = '+ str(st.session_state.count))
 #---------------------------------------------------
 st.divider()
-st.title('Counter Example using Callbacks with args')
-if 'count1' not in st.session_state:
-    st.session_state.count1 = 0
-c3,c4,c5,c6=st.columns([3,2,2,2])
-increment_value = c3.number_input('Enter a value', value=0, step=1)
+with tab5:
+    st.header('add sub Example using Callbacks')
 
-def add_counter1(increment_value):
-    st.session_state.count1 += increment_value
-def sub_counter1(increment_value):
-    st.session_state.count1 -= increment_value
-increment = c4.button('Add', on_click=add_counter1,
-    args=(increment_value, ))
-increment = c5.button('Sub', on_click=sub_counter1,
-    args=(increment_value, ))
-c6.text('Count1 = '+str(st.session_state.count1))
+    if 'count1' not in st.session_state:
+        st.session_state.count1 = 0
+    c3,c4,c5,c6=st.columns([3,2,2,2])
+    increment_value = c3.number_input('Enter a value', value=0, step=1)
+
+    def add_counter1(increment_value):
+        st.session_state.count1 += increment_value
+    def sub_counter1(increment_value):
+        st.session_state.count1 -= increment_value
+    increment = c4.button('Add', on_click=add_counter1,
+        args=(increment_value, ))
+    increment = c5.button('Sub', on_click=sub_counter1,
+        args=(increment_value, ))
+    c6.text('Count1 = '+str(st.session_state.count1))
 #-----------------------------------------------------
 st.divider()
 st.title('test dialog')
