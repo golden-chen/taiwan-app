@@ -13,7 +13,7 @@ st.write(
 s1_pg = st.Page("pages/story-1.py", title="story-1", icon=":material/coffee:")
 s2_pg = st.Page("pages/story-2.py", title="story-2", icon=":material/anchor:")
 s3_pg = st.Page("pages/story-3.py", title="story-3", icon=":material/news:")
-test_pg = st.Page("pages/test.py", title="test", icon=":🦈:")
+test_pg = st.Page("pages/test.py", title="test", page_icon="🦈")
 
 pg = st.navigation([s1_pg,s2_pg,s3_pg,test_pg])
 st.set_page_config(page_title="home", page_icon=":material/home:")
