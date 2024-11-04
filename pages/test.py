@@ -20,7 +20,7 @@ with tab3:
     st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 with tab4:
     st.header('Counter Example using Callbacks')    
-    st.title()
+    #st.title()
     if 'count' not in st.session_state:
         st.session_state.count = 0
     col=st.columns(2)
