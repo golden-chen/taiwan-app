@@ -84,7 +84,7 @@ with tab7:
 labs('test')
 st.divider()
 with tab8:
-    st.header('Cal A B')
+    st.header('Cal  A & B')
     col1,col2 = st.columns([1,2])
     col1.title('Total:')
     
