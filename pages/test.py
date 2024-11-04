@@ -7,7 +7,7 @@ def labs(s):
     cc[2].divider()
 st.markdown("# test ❄️")
 st.sidebar.markdown("# test ❄️")
-tab1, tab2, tab3,tab4,tab5 = st.tabs(["Cat", "Dog", "Owl",'counter','add_sub'])
+tab1, tab2, tab3,tab4,tab5,tab6 = st.tabs(["Cat", "Dog", "Owl",'counter','add_sub','dialog'])
 
 with tab1:
     st.header("A cat")
@@ -47,27 +47,26 @@ with tab5:
         args=(increment_value, ))
     c6.text('Count1 = '+str(st.session_state.count1))
 #-----------------------------------------------------
-st.divider()
-st.title('test dialog')
-
-def tvote():
-    @st.dialog("Cast your vote")
-    def vote(item):
-        st.write(f"Why is {item} your favorite?")
-        reason = st.text_input("Because...")
-        if st.button("Submit"):
-            st.session_state.vote = {"item": item, "reason": reason}
-            st.rerun()
+with tab6:
+    st.header('test dialog')
     
-    if "vote" not in st.session_state:
-        st.write("Vote for your favorite")
-        if st.button("A"):
-            vote("A")
-        if st.button("B"):
-            vote("B")
-    else:
-        f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
-st.button('dialog',on_click=tvote)       
+        @st.dialog("Cast your vote")
+        def vote(item):
+            st.write(f"Why is {item} your favorite?")
+            reason = st.text_input("Because...")
+            if st.button("Submit"):
+                st.session_state.vote = {"item": item, "reason": reason}
+                st.rerun()
+        
+        if "vote" not in st.session_state:
+            st.write("Vote for your favorite")
+            if st.button("A"):
+                vote("A")
+            if st.button("B"):
+                vote("B")
+        else:
+            f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
+    #st.button('dialog',on_click=tvote)       
 #--------------------------------------------------------    
 st.divider()
 with st.form("my_form"):
