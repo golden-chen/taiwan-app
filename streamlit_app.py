@@ -16,5 +16,5 @@ s3_pg = st.Page("pages/story-3.py", title="story-3", icon=":material/news:")
 test_pg = st.Page("pages/test.py", title="test", icon=":material/key:")
 
 pg = st.navigation([s1_pg,s2_pg,s3_pg,test_pg])
-st.set_page_config(page_title="home", page_icon=":material/home:")
+#st.set_page_config(page_title="home", page_icon=":material/home:")
 pg.run()
