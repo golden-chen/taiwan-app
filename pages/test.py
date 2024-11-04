@@ -7,7 +7,7 @@ def labs(s):
     cc[2].divider()
 st.markdown("# test ❄️")
 st.sidebar.markdown("# test ❄️")
-tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+tab1, tab2, tab3,tab4 = st.tabs(["Cat", "Dog", "Owl",'counter'])
 
 with tab1:
     st.header("A cat")
@@ -18,16 +18,16 @@ with tab2:
 with tab3:
     st.header("An owl")
     st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
-st.title('Counter Example using Callbacks')
-if 'count' not in st.session_state:
-    st.session_state.count = 0
-col=st.columns(2)
-def increment_counter():
-    st.session_state.count += 1
-
-col[0].button('Increment', on_click=increment_counter)
-#c2.title('Count = ', st.session_state.count)
-col[1].text('Count = '+ str(st.session_state.count))
+with tab4:
+    st.header('Counter Example using Callbacks')    
+    st.title()
+    if 'count' not in st.session_state:
+        st.session_state.count = 0
+    col=st.columns(2)
+    def increment_counter():
+        st.session_state.count += 1
+    col[0].button('Increment', on_click=increment_counter)
+    col[1].text('Count = '+ str(st.session_state.count))
 #---------------------------------------------------
 st.divider()
 st.title('Counter Example using Callbacks with args')
