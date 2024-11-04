@@ -49,7 +49,7 @@ with tab5:
 #-----------------------------------------------------
 with tab6:
     st.header('test dialog')
-    @st.fragment
+    @st.fragment(run_every="10s")
     def fragment_function():
         @st.dialog("Cast your vote")
         def vote(item):
