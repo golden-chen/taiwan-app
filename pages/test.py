@@ -7,7 +7,7 @@ def labs(s):
     cc[2].divider()
 st.markdown("# test ❄️")
 st.sidebar.markdown("# test ❄️")
-tab1, tab2, tab3,tab4,tab5,tab6,tab7,tab8 = st.tabs(["Cat", "Dog", "Owl",'counter','add_sub','dialog','form','cal A_B'])
+tab1, tab2, tab3,tab4,tab5,tab6,tab7,tab8,tab9 = st.tabs(["Cat", "Dog", "Owl",'counter','add_sub','dialog','form','cal A_B','IP2Form'])
 
 with tab1:
     st.header("A cat")
@@ -108,3 +108,20 @@ with tab8:
         col2.title(f'{a*b:.4f}')
     if submit4:
         col2.title(f'{a/b:.4f}') 
+#---------------------------------------------------
+with tab9:
+    st.header('Input to form')
+    if "attendance" not in st.session_state:
+    st.session_state.attendance = set()
+    
+    
+    def take_attendance():
+        if st.session_state.name in st.session_state.attendance:
+            st.info(f"{st.session_state.name} has already been counted.")
+        else:
+            st.session_state.attendance.add(st.session_state.name)
+    
+    
+    with st.form(key="my_form"):
+        st.text_input("Name", key="name")
+        st.form_submit_button("I'm here!", on_click=take_attendance)
