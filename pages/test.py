@@ -122,6 +122,6 @@ with tab9:
             st.session_state.attendance.add(st.session_state.name)
     
     
-    with st.form(key="my_form"):
+    with st.form(key="my_form1"):
         st.text_input("Name", key="name")
         st.form_submit_button("I'm here!", on_click=take_attendance)
