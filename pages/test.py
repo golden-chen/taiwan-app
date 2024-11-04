@@ -112,7 +112,7 @@ with tab8:
 with tab9:
     st.header('Input to form')
     if "attendance" not in st.session_state:
-    st.session_state.attendance = set()
+        st.session_state.attendance = set()
     
     
     def take_attendance():
