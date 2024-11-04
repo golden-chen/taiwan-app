@@ -65,7 +65,7 @@ with tab6:
         if st.button("B"):
             vote("B")
      else:
-        f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
+            f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
     #st.button('dialog',on_click=tvote)       
 #--------------------------------------------------------    
 st.divider()
