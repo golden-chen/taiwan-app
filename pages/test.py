@@ -127,5 +127,5 @@ with tab9:
         cols[0].text_input("Name", key="name")
         cols[1].number_input("BETA",key='b11')
         cols[2].form_submit_button("I'm here!", on_click=take_attendance)
-    st.slider("With default, no key", minimum, maximum, value=5)
+    st.slider("With default, no key", 20, 200, value=5)
     st.session_state
