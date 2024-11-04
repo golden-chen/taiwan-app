@@ -7,7 +7,7 @@ def labs(s):
     cc[2].divider()
 st.markdown("# test ❄️")
 st.sidebar.markdown("# test ❄️")
-tab1, tab2, tab3,tab4,tab5,tab6 = st.tabs(["Cat", "Dog", "Owl",'counter','add_sub','dialog'])
+tab1, tab2, tab3,tab4,tab5,tab6,tab7 = st.tabs(["Cat", "Dog", "Owl",'counter','add_sub','dialog','form'])
 
 with tab1:
     st.header("A cat")
@@ -68,17 +68,18 @@ with tab6:
         f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
     #st.button('dialog',on_click=tvote)       
 #--------------------------------------------------------    
-st.divider()
-with st.form("my_form"):
-    st.write("Inside the form")
-    slider_val = st.slider("Form slider")
-    checkbox_val = st.checkbox("Form checkbox")
-
-    # Every form must have a submit button.
-    submitted = st.form_submit_button("Submit")
-    if submitted:
-        st.write("slider", slider_val, "checkbox", checkbox_val)
-st.write("Outside the form")
+with tab7:
+    st.header('form')
+    with st.form("my_form"):
+        st.write("Inside the form")
+        slider_val = st.slider("Form slider")
+        checkbox_val = st.checkbox("Form checkbox")
+    
+        # Every form must have a submit button.
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            st.write("slider", slider_val, "checkbox", checkbox_val)
+    st.write("Outside the form")
 #--------------------------------------------------------    
 labs('test')
 st.divider()
