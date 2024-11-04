@@ -123,6 +123,8 @@ with tab9:
     
     
     with st.form(key="my_form1"):
-        st.text_input("Name", key="name")
-        st.form_submit_button("I'm here!", on_click=take_attendance)
+        cols=st.columns(3)
+        cols[0].text_input("Name", key="name")
+        cols[1].number_input("BETA",key='B11')
+        cols[2].form_submit_button("I'm here!", on_click=take_attendance)
     st.number_input("Alpha",key='A11')
