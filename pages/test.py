@@ -128,3 +128,4 @@ with tab9:
         cols[1].number_input("BETA",key='b11')
         cols[2].form_submit_button("I'm here!", on_click=take_attendance)
     st.number_input("Alpha",value=77,key='a11')
+    st.session_state
