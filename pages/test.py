@@ -125,4 +125,4 @@ with tab9:
     with st.form(key="my_form1"):
         st.text_input("Name", key="name")
         st.form_submit_button("I'm here!", on_click=take_attendance)
-    st.number_input("Alpha",key="A11")
+    st.number_input("Alpha",key='A11')
