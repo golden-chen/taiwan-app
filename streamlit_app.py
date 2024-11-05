@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="home", page_icon=":material/edit:")
+#st.set_page_config(page_title="home", page_icon=":material/edit:")
 #st.markdown("# main ❄️")
 st.sidebar.markdown("# Taiwan story ❄️")
 st.title("🎈 Taiwan story")
