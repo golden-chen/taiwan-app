@@ -28,7 +28,7 @@ with tab4:
     col[0].button('Increment', on_click=increment_counter)
     col[1].text('Count = '+ str(st.session_state.count))
 #---------------------------------------------------
-st.divider()
+#st.divider()
 with tab5:
     st.header('add sub Example using Callbacks')
 
@@ -84,7 +84,7 @@ with tab7:
     st.write("Outside the form")
 #--------------------------------------------------------    
 labs('test')
-st.divider()
+#st.divider()
 with tab8:
     st.header('Cal  A & B')
     col1,col2 = st.columns([1,2])
