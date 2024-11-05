@@ -1,6 +1,6 @@
 import streamlit as st
 
-
+st.set_page_config(page_title="home", page_icon=":material/edit:")
 #st.markdown("# main ❄️")
 st.sidebar.markdown("# Taiwan story ❄️")
 st.title("🎈 Taiwan story")
@@ -16,5 +16,5 @@ s3_pg = st.Page("pages/story-3.py", title="story-3", icon=":material/news:")
 test_pg = st.Page("pages/test.py", title="test", icon=":material/key:")
 
 pg = st.navigation([s1_pg,s2_pg,s3_pg,test_pg])
-st.set_page_config(page_title="home", page_icon=":material/edit:")
+
 pg.run()
